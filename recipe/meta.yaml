@@ -1,5 +1,5 @@
 {% set name = "cython-lint" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cython_lint-{{ version }}.tar.gz
-  sha256: de02d5d6a1f4c1257f8b15443417d716480a1cd8197e41969f1b330bbc6b6c9e
+  sha256: 985d7bf33e1d2d8cf2be5f037058cf6887639a793efb91035614b241a2207f17
 
 build:
   noarch: python
   entry_points:
-    - cython-lint = cython_lint:main
+    - cython-lint = cython_lint.cython_lint:main
+    - double-quote-cython-strings = cython_lint.string_fixer:main
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -32,6 +33,7 @@ test:
   commands:
     - pip check
     - cython-lint --help
+    - double-quote-cython-strings --help
   requires:
     - pip
 
