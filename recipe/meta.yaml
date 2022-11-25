@@ -12,7 +12,8 @@ source:
 build:
   noarch: python
   entry_points:
-    - cython-lint = cython_lint:main
+    - cython-lint = cython_lint.cython_lint:main
+    - double-quote-cython-strings = cython_lint.string_fixer:main
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -32,6 +33,7 @@ test:
   commands:
     - pip check
     - cython-lint --help
+    - double-quote-cython-strings --help
   requires:
     - pip
 
