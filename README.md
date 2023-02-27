@@ -1,11 +1,11 @@
-About cython-lint
-=================
+About cython-lint-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cython-lint-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/MarcoGorelli/cython-lint
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cython-lint-feedstock/blob/main/LICENSE.txt)
 
 Summary: A linter for Cython files
 
