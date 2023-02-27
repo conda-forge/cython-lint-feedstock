@@ -1,5 +1,5 @@
 {% set name = "cython-lint" %}
-{% set version = "0.12.4" %}
+{% set version = "0.12.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cython_lint-{{ version }}.tar.gz
-  sha256: ab000f2f23a91008d92863198cbb8b82315c7f4b4e2da3f8ad6207665216dcc9
+  sha256: 0822eeee26641caa2a860933a4b328dfa78cdf42c2b91cb603bc7cad3780cd32
 
 build:
   noarch: python
