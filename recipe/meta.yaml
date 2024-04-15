@@ -1,5 +1,5 @@
 {% set name = "cython-lint" %}
-{% set version = "0.16.0" %}
+{% set version = "0.16.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cython_lint-{{ version }}.tar.gz
-  sha256: 29021e7780bb7e8568a91c45da9680f4ab7bfbea5965fae4d254bf59aa8ffd2a
+  sha256: 61a0dd24009af14e86df67bf38dd4e4aeeb511ceaaf6af0dbd4dcccffd76149e
 
 build:
   noarch: python
@@ -20,12 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
+    - hatchling
   run:
+    - python >=3.8
     - cython >=0.29.32
     - pycodestyle
-    - python >=3.7
     - tokenize-rt >=3.2.0
+    - tomli
 
 test:
   imports:
