@@ -20,12 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
+    - hatchling
   run:
+    - python >=3.8
     - cython >=0.29.32
     - pycodestyle
-    - python >=3.7
     - tokenize-rt >=3.2.0
+    - tomli
 
 test:
   imports:
