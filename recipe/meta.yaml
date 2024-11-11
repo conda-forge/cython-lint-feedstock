@@ -1,13 +1,13 @@
 {% set name = "cython-lint" %}
-{% set version = "0.16.2" %}
+{% set version = "0.16.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cython_lint-{{ version }}.tar.gz
-  sha256: 61a0dd24009af14e86df67bf38dd4e4aeeb511ceaaf6af0dbd4dcccffd76149e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cython_lint-{{ version }}.tar.gz
+  sha256: 829046988d3986443c47183e7ea567a6893d78dfb135144670ffff67d58deb9e
 
 build:
   noarch: python
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cython >=0.29.32
     - pycodestyle
     - tokenize-rt >=3.2.0
@@ -38,6 +38,7 @@ test:
     - double-quote-cython-strings --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/MarcoGorelli/cython-lint
