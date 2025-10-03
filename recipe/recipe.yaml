@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cython-lint
-  version: 0.16.7
+  version: "0.17.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cython_lint-${{ version }}.tar.gz
-  sha256: dea72b81fd7635733080c67f1c8258cff498a4ef5664e010f894585a7290d6ad
+  sha256: 3274cf5b8f561b75ab141870805cdb5e9540fcbdd0e85c43d6782e091845cc53
 
 build:
   number: 0
