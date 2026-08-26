@@ -40,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cython-lint` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install cython-lint
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install cython-lint
 ```
 
-It is possible to list all of the versions of `cython-lint` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add cython-lint
+# for installing globally
+pixi global install cython-lint
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `cython-lint` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search cython-lint --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search cython-lint --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search cython-lint --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +118,8 @@ mamba repoquery whoneeds cython-lint --channel conda-forge
 # List dependencies of `cython-lint`:
 mamba repoquery depends cython-lint --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
